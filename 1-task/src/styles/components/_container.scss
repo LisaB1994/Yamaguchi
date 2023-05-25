@@ -1,0 +1,8 @@
+.container {
+  @include container(1512px);
+  width: 100%;
+
+  @media screen and (--small-viewport) {
+    padding: 0 11px;
+  }
+}

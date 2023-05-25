@@ -1,0 +1,42 @@
+@mixin container($mw: false) {
+  @if $mw {
+    max-width: $mw;
+  }
+  margin: 0 auto;
+}
+
+@mixin text($ff: false, $fst: false, $fw: false, $fs: false, $lh: false, $cl: false) {
+  @if $ff {
+    font-family: $ff, sans-serif;
+  }
+
+  @if $fst {
+    font-style: $fst;
+  }
+
+  @if $fw {
+    font-weight: $fw;
+  }
+
+  @if $fs {
+    font-size: $fs;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+
+  @if $cl {
+    color: $cl;
+  }
+}
+
+@mixin pad($pt: false, $pb: false) {
+  @if $pt {
+    padding-top: $pt;
+  }
+
+  @if $pb {
+    padding-bottom: $pb;
+  }
+}

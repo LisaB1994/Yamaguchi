@@ -1,0 +1,345 @@
+@custom-media --small-viewport (max-width: 320px);
+
+.container {
+  max-width: 1512px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (--small-viewport) {
+  .container {
+    padding: 0 17px;
+  }
+}
+
+.page {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (--small-viewport) {
+  .page {
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+}
+
+.content {
+  background-color: #1B1B1B;
+  background-image: url("../assets/images/background.webp");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 100%;
+  padding-top: 72px;
+  padding-bottom: 86px;
+
+  /* &__table-view {
+    width: 100%;
+    position: relative;
+    @media screen and (--small-viewport) {
+      display: none;
+    }
+
+    &-mobile {
+      display: none;
+
+      @media screen and (--small-viewport) {
+        display: block;
+        width: 100%;
+        position: relative;
+        margin-top: 80px;
+        margin-bottom: 60px;
+      }
+    }
+
+    &-button {
+      position: absolute;
+      left: 25%;
+      right: 0;
+      top: 54%;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: 200px 200px;
+      column-gap: 74px;
+
+      @media screen and (--small-viewport) {
+        grid-template-columns: 62px 62px;
+        column-gap: 22px;
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 135px;
+    bottom: 0;
+    transform: scale(1.5, 1.5) translateY(0px);
+    transition: all 1s ease-out;
+
+    &-mobile {
+      position: absolute;
+      left: -26%;
+      right: 0;
+      top: -4%;
+      bottom: 0;
+      transition: all 1s ease-out;
+      width: 100%;
+      left: 0;
+      transform: scale(1.7, 1.7) translateY(16px);
+    }
+
+    &-legs {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 62px;
+      bottom: 0;
+      transform: scale(1.5, 1.5);
+
+      @media screen and (--small-viewport) {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 6px;
+        bottom: 0;
+        right: 0;
+        transform: scale(1.7, 1.7);
+      }
+    }
+  }
+
+  &__button {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    max-height: 200px;
+    background-color: $background-color-button;
+    border-radius: 50%;
+    @include text("Ubuntu", normal, 300, 40px, 170%, $font-color-button);
+    text-align: center;
+
+    @media screen and (--small-viewport) {
+      height: 62px;
+      font-size: 12px;
+    }
+  }
+
+  &__description {
+    margin-left: 40px;
+    @media screen and (--small-viewport) {
+      margin-left: 0;
+    }
+
+    &-title {
+      @include text("Ubuntu", normal, 300, 62px, 100%, $font-color-title);
+      margin: 0;
+      margin-bottom: 38px;
+      max-width: 646px;
+
+      @media screen and (--small-viewport) {
+        @include text("Bebas Neue", normal, 700, 38px, 100%, $font-color-title);
+        margin-bottom: 30px;
+      }
+    }
+
+    &-wrapper {
+      width: 500px;
+
+      @media screen and (--small-viewport) {
+        width: 100%;
+      }
+    }
+
+    &-text {
+      @include text("Ubuntu", normal, 300, 22px, 170%, $font-color-main);
+      margin: 0;
+
+      &:first-child {
+        margin-bottom: 20px;
+
+        @media screen and (--small-viewport) {
+          margin-bottom: 54px;
+        }
+      }
+
+      @media screen and (--small-viewport) {
+        font-size: 16px;
+      }
+    }
+  } */
+}
+
+@media screen and (--small-viewport) {
+  .content {
+    padding-top: 17px;
+    padding-bottom: 13px;
+  }
+}
+
+.content__wrapper {
+  display: flex;
+  position: relative;
+}
+
+@media screen and (--small-viewport) {
+  .content__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.content__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 700px;
+}
+
+.content__description-title {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 106%;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 64px;
+  max-width: 482px;
+}
+
+.content__description-text {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 170%;
+  color: #fff;
+  margin: 0;
+  max-width: 587px;
+}
+
+.content__description-text:nth-child(2) {
+  margin-bottom: 40px;
+}
+
+.content__description-text:nth-child(3) {
+  margin-bottom: 49px;
+}
+
+.content__description-voice-command {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 90%;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.content__description-voice-command ~ pre {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 61px;
+  line-height: 90%;
+  color: #fff;
+  margin: 0;
+}
+
+.content__girl {
+  position: relative;
+  z-index: 5;
+}
+
+.content__girl-go {
+  position: absolute;
+  bottom: -600px;
+  animation: 4s ease-out 1s move;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+@keyframes move {
+  from {
+    bottom: -600px;
+  }
+
+  to {
+    bottom: 800px;
+  }
+}
+
+.content__girl-move {
+  animation: 4s linear infinite wiggle;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: translateY(10px);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  75% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.content__girl-img {
+  position: absolute;
+  inset: 15px 0 0 -77px;
+}
+
+.content__girl-hole {
+  width: 340px;
+  height: 64px;
+  background-color: #000;
+  border-radius: 70%;
+  position: absolute;
+  inset: 100% 0 0 52%;
+  animation: 6s linear 0s hole;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+@keyframes hole {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  80% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.content__phone {
+  position: absolute;
+  inset: 0 0 0 56%;
+}
+
+.content__phone-img {
+  transform: scale(0.8, 1) translateX(-26px) translateY(-65px);
+}

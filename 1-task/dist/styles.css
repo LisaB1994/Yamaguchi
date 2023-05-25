@@ -1,0 +1,18 @@
+/* Error: (max-width: 576px) isn't a valid CSS value.
+ *   ,
+ * 5 |   @media screen and ($small-viewport) {
+ *   |                      ^^^^^^^^^^^^^^^
+ *   '
+ *   src/styles/components/_content.scss 5:22  @import
+ *   src/styles/components/index.scss 6:9      root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: (max-width: 576px) isn't a valid CSS value.\a   \2577 \a 5 \2502    @media screen and ($small-viewport) {\a   \2502                       ^^^^^^^^^^^^^^^\a   \2575 \a   src/styles/components/_content.scss 5:22  @import\a   src/styles/components/index.scss 6:9      root stylesheet";
+}
